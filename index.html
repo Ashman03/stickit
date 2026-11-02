@@ -1,5 +1,6 @@
 <!doctype html>
-<html lang="en">
+<!-- Stickit v1.2.1 -->
+<html lang="en-AU">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
@@ -56,11 +57,11 @@ button{cursor:pointer}
 .vh{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 
 .app{max-width:520px;margin:0 auto}
-.scene{position:relative;height:clamp(236px, 60.5vw, 316px);overflow:hidden;background:var(--sky)}
+.scene{position:relative;height:clamp(300px, 76.9vw, 400px);overflow:hidden;background:var(--sky)}
 .scene svg{position:absolute;inset:0;width:100%;height:100%}
 .s-line{stroke:var(--line)} .s-sun{fill:var(--sun);stroke:var(--line)} .s-moon{fill:var(--moon);stroke:var(--line)} .s-cloud{fill:var(--cloud);stroke:var(--line)}
 .s-back{fill:var(--hill-back);stroke:var(--line)} .s-front{fill:var(--hill-front);stroke:var(--line)}
-.dateblock{position:absolute;top:36px;right:max(20px, env(safe-area-inset-right,0px));text-align:right;display:flex;flex-direction:column;align-items:flex-end;gap:2px}
+.dateblock{position:absolute;top:18px;right:max(20px, env(safe-area-inset-right,0px));text-align:right;display:flex;flex-direction:column;align-items:flex-end;gap:2px}
 .dateblock h1{margin:0;font-family:var(--font-display);font-weight:800;font-size:46px;line-height:1;text-wrap:balance}
 .daynav{display:flex;flex-direction:column;align-items:flex-end;gap:8px;margin-top:6px}
 .daterow{display:flex;align-items:center;gap:8px}
@@ -68,11 +69,12 @@ button{cursor:pointer}
 .round{position:relative;flex:none;width:30px;height:30px;box-sizing:border-box;border-radius:50%;border:2px solid var(--line);background:var(--card);display:grid;place-items:center;padding:0;box-shadow:2px 2px 0 var(--shadow)}
 .round::after{content:"";position:absolute;inset:-7px}
 .round svg{stroke:var(--ink)}
-.backlink{font-family:var(--font-display);font-weight:800;font-size:14px;border:2px solid var(--line);background:var(--pill);color:var(--on-pastel);border-radius:999px;padding:0 12px;height:32px;box-shadow:2px 2px 0 var(--shadow)}
+.backlink{font-family:var(--font-display);font-weight:800;font-size:15px;border:2px solid var(--line);background:var(--pill);color:var(--on-pastel);border-radius:999px;padding:0 16px 0 10px;height:44px;box-shadow:2px 2px 0 var(--shadow);display:inline-flex;align-items:center;gap:4px}
+.backlink svg{stroke:currentColor}
 
 .sheet{position:relative;margin-top:-24px;background:var(--sheet);border-top:2.5px solid var(--line);border-radius:30px 30px 0 0;padding-top:18px;padding-bottom:calc(130px + env(safe-area-inset-bottom,0px));padding-left:max(16px, env(safe-area-inset-left,0px));padding-right:max(16px, env(safe-area-inset-right,0px));min-height:60vh;display:flex;flex-direction:column;gap:12px}
 .note{background:var(--note);border:2px solid var(--line);border-radius:14px;padding:8px 12px;font-size:14px}
-.banner{display:flex;align-items:center;gap:10px;background:var(--banner);border:2px dashed var(--line);border-radius:14px;padding:8px 12px;font-size:14px}
+.banner{margin:0;display:flex;align-items:center;gap:10px;background:var(--banner);border:2px dashed var(--line);border-radius:14px;padding:8px 12px;font-size:14px}
 .banner svg{flex:none;stroke:var(--ink)}
 .list{display:flex;flex-direction:column;gap:11px;margin:0;padding:0;list-style:none}
 .subhead{margin:6px 0 0;font-family:var(--font-display);font-weight:800;font-size:17px}
@@ -98,18 +100,23 @@ button{cursor:pointer}
 .chunky.danger{background:var(--danger);color:var(--sheet)}
 
 .day{display:flex;flex-direction:column;gap:9px}
-.dayhead{align-self:flex-start;background:none;border:0;padding:6px 2px;font-family:var(--font-display);font-weight:800;font-size:19px;text-align:left;text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:4px;text-decoration-color:var(--pill)}
+.dayhead{align-self:flex-start;min-height:44px;background:none;border:0;padding:6px 2px;font-family:var(--font-display);font-weight:800;font-size:19px;text-align:left;text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:4px;text-decoration-color:var(--pill)}
 .free{margin:0;color:var(--ink-2);font-size:14px;padding-left:4px}
 .small .dot{width:30px;height:30px}
 .small .dot svg{width:16px;height:16px}
 .small .body{padding:3px 0}
 .btnrow{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
-.chunky.small{height:40px;font-size:15px;padding:0 16px}
+.chunky.small{height:44px;font-size:15px;padding:0 16px}
 .chev{flex:none;width:36px;display:grid;place-items:center;color:var(--ink-2)}
 .chev svg{stroke:currentColor}
 .donebox{border:2px dashed var(--line);border-radius:16px;padding:2px 12px 12px}
 .donebox summary{cursor:pointer;font-family:var(--font-display);font-weight:800;font-size:16px;min-height:44px;display:flex;align-items:center}
 .donebox .list{margin-top:6px}
+.blockline{display:block}
+.blockline-btn{width:100%;min-height:44px;box-sizing:border-box;display:flex;align-items:center;gap:8px;padding:0 12px;border:2px dashed var(--line);border-radius:14px;background:var(--block);font-size:14px;text-align:left}
+.mini-dot{flex:none;width:24px;height:24px;box-sizing:border-box;border-radius:50%;border:2px solid var(--line);background:var(--cat);color:var(--on-pastel);display:grid;place-items:center}
+.bl-title{flex:1;min-width:0;font-weight:700;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.bl-time{flex:none;color:var(--ink-2)}
 .backuprow{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;padding-top:22px}
 .jsonbox{display:flex;flex-direction:column;gap:8px}
 .jsonbox textarea{width:100%;box-sizing:border-box;min-height:140px;border:2px solid var(--line);border-radius:12px;background:var(--field);color:var(--ink);font:13px/1.4 ui-monospace,Menlo,Consolas,monospace;padding:8px}
@@ -152,12 +159,12 @@ fieldset{border:0;margin:0;padding:0;min-width:0}
 <body>
 <div class="app">
   <header class="scene" id="scene">
-    <svg viewBox="0 0 390 240" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
-      <path class="s-line" d="M24 205 Q195 -20 366 205" fill="none" stroke-width="2" stroke-dasharray="3 8" stroke-linecap="round"></path>
+    <svg viewBox="0 0 390 300" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
+      <path class="s-line" d="M24 236 Q195 110 366 236" fill="none" stroke-width="2" stroke-dasharray="3 8" stroke-linecap="round"></path>
       <g id="sky-body"></g>
-      <path class="s-cloud" d="M36 64 h52 a13 13 0 0 0 -5 -25 a17 17 0 0 0 -31 -5 a12 12 0 0 0 -16 30 z" stroke-width="2.5" stroke-linejoin="round"></path>
-      <path class="s-back" d="M150 214 C210 150 300 146 390 176 L390 240 L150 240 Z" stroke-width="2.5" stroke-linejoin="round"></path>
-      <path class="s-front" d="M-4 176 C70 160 170 168 260 216 L260 240 L-4 240 Z" stroke-width="2.5" stroke-linejoin="round"></path>
+      <path class="s-cloud" transform="translate(0 64)" d="M36 64 h52 a13 13 0 0 0 -5 -25 a17 17 0 0 0 -31 -5 a12 12 0 0 0 -16 30 z" stroke-width="2.5" stroke-linejoin="round"></path>
+      <path class="s-back" d="M150 274 C210 210 300 206 390 236 L390 300 L150 300 Z" stroke-width="2.5" stroke-linejoin="round"></path>
+      <path class="s-front" d="M-4 236 C70 220 170 228 260 276 L260 300 L-4 300 Z" stroke-width="2.5" stroke-linejoin="round"></path>
     </svg>
     <div class="dateblock">
       <h1 id="weekday">Today</h1>
@@ -195,15 +202,18 @@ fieldset{border:0;margin:0;padding:0;min-width:0}
       </div>
       <div class="field">
         <label for="f-date">Day</label>
-        <div class="row" style="align-items:center">
-          <input class="input" id="f-date" type="date" style="flex:1 1 160px;width:auto">
+        <div class="row">
           <button class="quick" type="button" data-quick="0">Today</button>
           <button class="quick" type="button" data-quick="1">Tomorrow</button>
         </div>
+        <input class="input" id="f-date" type="date">
       </div>
-      <div class="row">
-        <div class="field"><label for="f-time">Time (optional)</label><input class="input" id="f-time" type="time"></div>
-        <div class="field"><label for="f-end">Ends (optional)</label><input class="input" id="f-end" type="time"></div>
+      <div class="field">
+        <div class="row">
+          <div class="field"><label for="f-time">Time (optional)</label><input class="input" id="f-time" type="time"></div>
+          <div class="field"><label for="f-end">Ends (optional)</label><input class="input" id="f-end" type="time"></div>
+        </div>
+        <p class="err" id="f-end-err" hidden>The end time needs to be after the start time.</p>
       </div>
       <div class="field">
         <label for="f-repeat">Repeat</label>
@@ -222,6 +232,7 @@ fieldset{border:0;margin:0;padding:0;min-width:0}
       <div class="field" id="f-until-wrap" hidden>
         <label for="f-until">Stop repeating after (optional)</label>
         <input class="input" id="f-until" type="date">
+        <p class="err" id="f-until-err" hidden>Pick a day on or after the sticker's start day.</p>
       </div>
       <label class="check"><input id="f-due" type="checkbox"> This is a deadline (show a countdown at the top)</label>
       <div id="confirm-box" class="confirm" hidden>
@@ -305,6 +316,7 @@ function todayStr(){ return ymd(new Date()); }
 function mondayOf(s){ var d = parse(s); d.setDate(d.getDate() - ((d.getDay()+6) % 7)); return ymd(d); }
 function fmtTime(t){ if(!t) return ""; var p = t.split(":").map(Number); var h = p[0], m = p[1]; var ap = h >= 12 ? "pm" : "am"; var hh = h % 12 || 12; return hh + ":" + pad(m) + ap; }
 function longDate(s){ var d = parse(s); return d.getDate()+" "+MONTHS[d.getMonth()]; }
+function inSentence(n){ return /^(Today|Tomorrow|Yesterday)$/.test(n) ? n.toLowerCase() : n; }
 function dayName(s){
   var t = todayStr(), n = diffDays(t, s);
   if(n === 0) return "Today"; if(n === 1) return "Tomorrow"; if(n === -1) return "Yesterday";
@@ -319,7 +331,10 @@ function occursOn(it, d){
   if(r.until && d > r.until) return false;
   var dd = parse(d);
   if(r.freq === "daily") return true;
-  if(r.freq === "monthly") return dd.getDate() === parse(it.date).getDate();
+  if(r.freq === "monthly"){
+    var lastOfMonth = new Date(dd.getFullYear(), dd.getMonth() + 1, 0).getDate();
+    return dd.getDate() === Math.min(parse(it.date).getDate(), lastOfMonth);
+  }
   var days = (r.days && r.days.length) ? r.days : [parse(it.date).getDay()];
   if(days.indexOf(dd.getDay()) < 0) return false;
   if(r.freq === "weekly") return true;
@@ -337,16 +352,135 @@ function repeatLabel(r){
   if(r.freq === "fortnightly") return days.length ? "every second " + days.join(", ") : "fortnightly";
   return "";
 }
-function metaFor(it){
-  var parts = [];
-  if(it.time) parts.push(fmtTime(it.time) + (it.end ? " to " + fmtTime(it.end) : ""));
-  else parts.push("Anytime");
+function timeRange(it){
+  if(!it.time) return "Anytime";
+  if(!it.end) return fmtTime(it.time);
+  var a = fmtTime(it.time), b = fmtTime(it.end);
+  if(a.slice(-2) === b.slice(-2)) a = a.slice(0, -2);
+  return a + "–" + b;
+}
+function shortRepeat(it){
+  var r = it.repeat;
+  if(!r || !r.freq) return "";
+  if(r.freq === "daily") return "Daily";
+  if(r.freq === "monthly") return "Monthly";
+  var days = (r.days && r.days.length ? r.days : [parse(it.date).getDay()]).slice().sort(function(a,b){ return ((a+6)%7)-((b+6)%7); });
+  var label = days.join(",") === "1,2,3,4,5" ? "Weekdays" : days.map(function(i){ return DAYS_SHORT[i]; }).join("/");
+  return r.freq === "fortnightly" ? "Every 2nd " + label : label;
+}
+/* Detail line on Today and Week: the coloured icon already shows the category,
+   so only uni stickers name their subject. */
+function metaFor(it, plan){
+  var parts = [plan ? "Planned " + rangeText(plan.time, plan.end) : timeRange(it)];
   var sj = it.cat === "uni" ? subjOf(it) : null;
-  parts.push(sj ? sj.code : (CATS[it.cat] || CATS.home).label.toLowerCase());
-  var rl = repeatLabel(it.repeat); if(rl) parts.push(rl);
-  if(it.due) parts.push("deadline");
+  if(sj) parts.push(sj.code);
+  var rl = shortRepeat(it); if(rl) parts.push(rl);
+  if(it.due) parts.push("due");
   return parts.join(", ");
 }
+function fromWhen(s){
+  var n = diffDays(s, todayStr()), d = parse(s);
+  if(n === 1) return "yesterday";
+  if(n < 7) return DAYS[d.getDay()];
+  return DAYS_SHORT[d.getDay()] + " " + d.getDate() + " " + MON_SHORT[d.getMonth()];
+}
+function carriedMeta(it, plan){
+  var m = metaFor(it, plan);
+  return "From " + fromWhen(it.date) + ", " + m.charAt(0).toLowerCase() + m.slice(1);
+}
+/* Ticked-off stickers sink to the bottom of a day, keeping time order otherwise. */
+function doneLast(list, d){
+  return list.filter(function(it){ return !isDone(it, d); }).concat(list.filter(function(it){ return isDone(it, d); }));
+}
+
+/* ---------- Plan my day ----------
+   Fits the day's stickers that have no time into the free gaps between
+   7:00am and 9:00pm, around anything already timed, with a 10 minute
+   breather after each. Plans are kept per day (plans[date][itemId]) so a
+   repeating sticker can be planned differently each day, and clearing a
+   plan never touches the stickers themselves. */
+var DAY_START = 7 * 60, DAY_END = 21 * 60, GAP = 10, DEFAULT_TIMED = 30;
+var PLAN_MINUTES = {uni: 60, exercise: 45, garden: 30, home: 30, event: 60, holiday: 60, work: 60};
+function toMin(t){ var p = t.split(":").map(Number); return p[0] * 60 + p[1]; }
+function fromMin(m){ return pad(Math.floor(m / 60)) + ":" + pad(m % 60); }
+function up5(m){ return Math.ceil(m / 5) * 5; }
+function rangeText(a, b){ var x = fmtTime(a), y = fmtTime(b); if(x.slice(-2) === y.slice(-2)) x = x.slice(0, -2); return x + "–" + y; }
+function planFor(d, it){ return !it.time && plans[d] && plans[d][it.id] ? plans[d][it.id] : null; }
+function planCandidates(d){
+  var own = itemsOn(d).filter(function(it){ return !it.time && !isBlock(it) && !isDone(it, d); }).map(function(it){ return {it: it}; });
+  var carry = d === todayStr() ? carriedOver().filter(function(it){ return !it.time; }).map(function(it){ return {it: it, carried: true}; }) : [];
+  return own.concat(carry);
+}
+function unplannedCount(d){ return planCandidates(d).filter(function(c){ return !planFor(d, c.it); }).length; }
+function hasPlan(d){ var p = plans[d]; return !!p && Object.keys(p).some(function(id){ return items.some(function(it){ return it.id === id && !it.time; }); }); }
+function makePlan(d, nowMin){
+  var todo = planCandidates(d).filter(function(c){ return !planFor(d, c.it); });
+  function rank(c){ return c.it.due ? 0 : c.carried ? 1 : c.it.cat === "uni" ? 2 : 3; }
+  todo.sort(function(a, b){
+    var r = rank(a) - rank(b); if(r) return r;
+    if((a.it.due && b.it.due) || (a.carried && b.carried)) return a.it.date < b.it.date ? -1 : a.it.date > b.it.date ? 1 : 0;
+    return 0;
+  });
+  var busy = [];
+  itemsOn(d).forEach(function(it){ if(it.time){ var s = toMin(it.time); busy.push([s, (it.end ? toMin(it.end) : s + DEFAULT_TIMED) + GAP]); } });
+  var dayPlan = Object.assign({}, plans[d] || {});
+  Object.keys(dayPlan).forEach(function(id){ var p = dayPlan[id]; busy.push([toMin(p.time), toMin(p.end) + GAP]); });
+  var start = Math.max(DAY_START, nowMin == null ? 0 : up5(nowMin + 5));
+  var placed = 0, left = 0;
+  todo.forEach(function(c){
+    var len = PLAN_MINUTES[c.it.cat] || 30, cur = up5(start), slot = null;
+    busy.sort(function(a, b){ return a[0] - b[0]; });
+    for(var i = 0; i < busy.length && slot === null; i++){
+      if(busy[i][1] <= cur) continue;
+      if(busy[i][0] - cur >= len) slot = cur; else cur = up5(Math.max(cur, busy[i][1]));
+    }
+    if(slot === null && DAY_END - cur >= len) slot = cur;
+    if(slot === null){ left++; return; }
+    dayPlan[c.it.id] = {time: fromMin(slot), end: fromMin(slot + len)};
+    busy.push([slot, slot + len + GAP]); placed++;
+  });
+  return {plan: dayPlan, placed: placed, left: left};
+}
+function planDay(d){
+  if(d < todayStr()) return;
+  var now = new Date();
+  var r = makePlan(d, d === todayStr() ? now.getHours() * 60 + now.getMinutes() : null);
+  if(!r.placed){ toast(d === todayStr() ? "There isn't enough time left before 9pm. Try planning tomorrow." : "Nothing fits between 7am and 9pm that day."); return; }
+  plans[d] = r.plan; persist(); render();
+  toast("Planned " + r.placed + (r.placed === 1 ? " sticker" : " stickers") + (r.left ? ". " + r.left + " didn't fit before 9pm." : ""));
+}
+function clearPlan(d){ delete plans[d]; persist(); render(); toast("Plan cleared"); }
+function cleanPlans(o){
+  var out = {};
+  if(!o || typeof o !== "object") return out;
+  Object.keys(o).forEach(function(d){
+    if(!DATE_RE.test(d) || !o[d] || typeof o[d] !== "object") return;
+    var day = {};
+    Object.keys(o[d]).forEach(function(id){ var p = o[d][id]; if(p && TIME_RE.test(p.time || "") && TIME_RE.test(p.end || "")) day[id] = {time: p.time, end: p.end}; });
+    if(Object.keys(day).length) out[d] = day;
+  });
+  return out;
+}
+/* A day's stickers in time order, using planned times for untimed ones, done last. */
+function dayEntries(d, withCarried){
+  var p = plans[d] || {};
+  var entries = itemsOn(d).map(function(it){ return {it: it, d: d}; });
+  var carryRest = [];
+  if(withCarried){
+    carriedOver().forEach(function(it){
+      if(!it.time && p[it.id]) entries.push({it: it, d: it.date, carried: true});
+      else carryRest.push(it);
+    });
+  }
+  function eff(e){ return e.it.time || (!e.it.time && p[e.it.id] ? p[e.it.id].time : null); }
+  entries = entries.map(function(e, i){ e.i = i; e.t = eff(e); return e; }).sort(function(a, b){
+    if(a.t && b.t) return a.t < b.t ? -1 : a.t > b.t ? 1 : a.i - b.i;
+    if(a.t) return -1; if(b.t) return 1; return a.i - b.i;
+  });
+  entries = entries.filter(function(e){ return !isDone(e.it, e.d); }).concat(entries.filter(function(e){ return isDone(e.it, e.d); }));
+  return {entries: entries, carry: carryRest};
+}
+function entryMeta(e, d){ var plan = planFor(d, e.it); return e.carried ? carriedMeta(e.it, plan) : metaFor(e.it, plan); }
 function sortForDay(list){
   return list.slice().sort(function(a, b){
     if(a.time && b.time) return a.time < b.time ? -1 : a.time > b.time ? 1 : 0;
@@ -384,6 +518,7 @@ var subjects = [];
 var subjectId = null;
 var lastExport = null;
 var pendingImport = null;
+var plans = {};
 var STORE_KEY = "stickit-data-v1";
 
 function stickerHTML(it, d, idx, small, metaOverride){
@@ -394,36 +529,46 @@ function stickerHTML(it, d, idx, small, metaOverride){
     (done ? '<svg class="star" width="32" height="32" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.8l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 16.8 6.6 19.7l1-6.1-4.4-4.3 6.1-.9z" stroke-width="1.8" stroke-linejoin="round"></path></svg>' : '<span class="ring"></span>') +
     '</button>';
   var meta = metaOverride || metaFor(it);
-  if(!metaOverride && d && d !== it.date && !(it.repeat && it.repeat.freq)) meta = "From " + dayName(it.date) + ", " + meta.charAt(0).toLowerCase() + meta.slice(1);
   return '<li class="' + cls + '" style="--tilt:' + TILTS[idx % TILTS.length] + '">' +
     '<span class="dot" style="--cat:var(' + dotVar(it) + ')">' + catIcon(it.cat, small ? 16 : 20) + '</span>' +
-    '<button class="body" type="button" data-edit="' + esc(it.id) + '" aria-label="Edit ' + esc(it.title) + '"><span class="title">' + esc(it.title) + '</span><span class="meta">' + esc(meta) + '</span></button>' +
+    '<button class="body" type="button" data-edit="' + esc(it.id) + '" aria-label="Edit ' + esc(it.title + ", " + meta) + '"><span class="title">' + esc(it.title) + '</span><span class="meta">' + esc(meta) + '</span></button>' +
     tick + '</li>';
 }
 
+/* Sun 6am-6pm and moon 6pm-6am each travel the full arc. The arc sits low
+   (peak y=173 in the 390x300 scene) so the sun's rays (44 units above its
+   centre) never reach the date block, which ends about y=122. */
+function skyPosition(now){
+  var h = now.getHours() + now.getMinutes() / 60;
+  var isDay = h >= 6 && h < 18;
+  var k = isDay ? (h - 6) / 12 : ((h - 18 + 24) % 24) / 12;
+  var x = (1-k)*(1-k)*24 + 2*(1-k)*k*195 + k*k*366, y = (1-k)*(1-k)*236 + 2*(1-k)*k*110 + k*k*236;
+  return {isDay: isDay, k: k, x: Math.round(x * 10) / 10, y: Math.round(y * 10) / 10};
+}
+/* Week view: work, events and holidays as one compact line (title and times). */
+function blockLineHTML(it){
+  return '<li class="blockline"><button class="blockline-btn" type="button" data-edit="' + esc(it.id) + '" aria-label="Edit ' + esc(it.title) + '">' +
+    '<span class="mini-dot" style="--cat:var(' + dotVar(it) + ')">' + catIcon(it.cat, 14) + '</span><span class="bl-title">' + esc(it.title) + '</span>' +
+    '<span class="bl-time">' + esc(it.time ? timeRange(it) : "All day") + '</span></button></li>';
+}
 function renderScene(){
   var t = todayStr();
   var subj = view === "subject" ? findSubject(subjectId) : null;
-  $("weekday").textContent = view === "week" ? "This week" : view === "uni" ? "Uni" : view === "subject" ? (subj ? subj.code : "Subject") : DAYS[parse(day).getDay()];
+  $("weekday").textContent = view === "week" ? "Next 7 days" : view === "uni" ? "Uni" : view === "subject" ? (subj ? subj.code : "Subject") : DAYS[parse(day).getDay()];
   var nav;
   if(view === "today"){
     nav = '<div class="daterow"><button class="round" type="button" id="prev-day" aria-label="Previous day"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"></path></svg></button>' +
       '<p class="dt">' + esc(longDate(day)) + '</p>' +
-      '<button class="round" type="button" id="next-day" aria-label="Next day"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"></path></svg></button></div>' +
-      (day !== t ? '<button class="backlink" type="button" id="go-today">Back to today</button>' : "");
+      '<button class="round" type="button" id="next-day" aria-label="Next day"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"></path></svg></button></div>';
   } else if(view === "week"){
     nav = '<p class="dt">' + esc(longDate(t) + " to " + longDate(addDays(t, 6))) + '</p>';
   } else if(view === "uni"){
     nav = '<p class="dt">' + (subjects.length === 1 ? "1 subject" : subjects.length + " subjects") + '</p>';
   } else {
-    nav = '<p class="dt" style="white-space:normal;max-width:230px;text-align:right">' + esc(subj && subj.name ? subj.name : "Uni subject") + '</p><button class="backlink" type="button" id="back-uni">All subjects</button>';
+    nav = '<p class="dt" style="white-space:normal;max-width:230px;text-align:right">' + esc(subj && subj.name ? subj.name : "Uni subject") + '</p>';
   }
   $("daynav").innerHTML = nav;
-  var now = new Date(), h = now.getHours() + now.getMinutes() / 60, g = $("sky-body");
-  var isDay = h >= 6 && h < 18;
-  var k = ((h - 6 + 24) % 24) / 24;
-  var x = (1-k)*(1-k)*24 + 2*(1-k)*k*195 + k*k*366, y = (1-k)*(1-k)*205 + 2*(1-k)*k*(-20) + k*k*205;
-  x = Math.round(x * 10) / 10; y = Math.round(y * 10) / 10;
+  var p = skyPosition(new Date()), x = p.x, y = p.y, isDay = p.isDay, g = $("sky-body");
   if(isDay){
     var rays = "";
     [[0,-34,0,-44],[25,-24,33,-31],[-25,-24,-33,-31],[34,0,44,0],[-34,0,-44,0]].forEach(function(r){ rays += '<line class="s-line" x1="'+(x+r[0])+'" y1="'+(y+r[1])+'" x2="'+(x+r[2])+'" y2="'+(y+r[3])+'" stroke-width="2.5" stroke-linecap="round"></line>'; });
@@ -447,22 +592,29 @@ function render(){
     html += '<p class="banner"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 21V4"></path><path d="M5 4h11l-2 4 2 4H5"></path></svg><span>' + dueText(it) + '</span></p>';
   });
   if(view === "today"){
-    var list = itemsOn(day);
-    var carry = day === todayStr() ? carriedOver() : [];
+    if(day !== todayStr()) html += '<div class="btnrow"><button class="backlink" type="button" data-go-today>' + BACK_CHEVRON + 'Back to today</button></div>';
+    var de = dayEntries(day, day === todayStr());
+    var list = de.entries, carry = de.carry;
     if(!list.length && !carry.length){
-      html += '<div class="empty"><p>' + (items.length ? "Nothing on for " + (day === todayStr() ? "today" : dayName(day)) + " yet." : "No stickers yet. Add the first thing you want to get done, or use Import backup below to bring in your saved stickers.") + '</p><button class="chunky" type="button" data-add-day="' + day + '">Add a sticker</button></div>';
+      html += '<div class="empty"><p>' + (items.length ? "Nothing on for " + inSentence(dayName(day)) + " yet." : "No stickers yet. Add the first thing you want to get done, or use Import backup below to bring in your saved stickers.") + '</p><button class="chunky" type="button" data-add-day="' + day + '">Add a sticker</button></div>';
     } else {
-      if(list.length) html += '<ul class="list">' + list.map(function(it, i){ return stickerHTML(it, day, i); }).join("") + '</ul>';
+      var toPlan = day >= todayStr() ? unplannedCount(day) : 0, planned = day >= todayStr() && hasPlan(day);
+      if(toPlan || planned){
+        html += '<div class="btnrow">' +
+          (toPlan ? '<button class="chunky small" type="button" data-plan-day>' + (day === todayStr() ? "Plan my day" : "Plan this day") + '</button>' : '') +
+          (planned ? '<button class="chunky small plain" type="button" data-clear-plan>Clear plan</button>' : '') + '</div>';
+      }
+      if(list.length) html += '<ul class="list">' + list.map(function(e, i){ return stickerHTML(e.it, e.d, i, false, entryMeta(e, day)); }).join("") + '</ul>';
       if(carry.length){
-        html += '<h2 class="subhead">Still to do from earlier</h2><ul class="list">' + carry.map(function(it, i){ return stickerHTML(it, it.date, i + 1); }).join("") + '</ul>';
+        html += '<h2 class="subhead">Still to do from earlier</h2><ul class="list">' + carry.map(function(it, i){ return stickerHTML(it, it.date, i + 1, false, carriedMeta(it)); }).join("") + '</ul>';
       }
     }
   } else if(view === "week"){
     var t = todayStr();
     for(var i = 0; i < 7; i++){
-      var d = addDays(t, i), dl2 = itemsOn(d);
+      var d = addDays(t, i), dl2 = dayEntries(d, false).entries;
       html += '<section class="day"><button class="dayhead" type="button" data-open-day="' + d + '">' + esc(dayName(d)) + '</button>';
-      html += dl2.length ? '<ul class="list">' + dl2.map(function(it, j){ return stickerHTML(it, d, j + i, true); }).join("") + '</ul>' : '<p class="free">Free day</p>';
+      html += dl2.length ? '<ul class="list">' + dl2.map(function(e, j){ return isBlock(e.it) ? blockLineHTML(e.it) : stickerHTML(e.it, d, j + i, true, entryMeta(e, d)); }).join("") + '</ul>' : '<p class="free">Free day</p>';
       html += '</section>';
     }
   } else if(view === "uni"){
@@ -470,7 +622,7 @@ function render(){
   } else {
     html += renderSubject();
   }
-  if(view !== "subject"){
+  if(view === "today"){
     if(pendingImport){
       var wd = pendingImport.when ? new Date(pendingImport.when) : null;
       var w = wd && !isNaN(wd) ? " from " + longDate(ymd(wd)) : "";
@@ -558,7 +710,7 @@ function readImport(file){
     var its = d.items.map(cleanImportedItem).filter(Boolean);
     var subs = Array.isArray(d.subjects) ? d.subjects.map(cleanImportedSubject).filter(Boolean) : [];
     pendingImport = {items: its, subjects: subs, when: typeof d.exportedAt === "string" ? d.exportedAt : null, skipped: d.items.length - its.length};
-    if(view === "subject") view = "today";
+    view = "today";
     render();
     var b = $("import-confirm"); if(b){ b.scrollIntoView({block: "center"}); b.focus(); }
   };
@@ -590,6 +742,7 @@ function dueWhen(s){
   if(n < 7) return DAYS[d.getDay()];
   return d.getDate() + " " + MON_SHORT[d.getMonth()];
 }
+var BACK_CHEVRON = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"></path></svg>';
 var CHEVRON = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"></path></svg>';
 
 function renderUni(){
@@ -621,7 +774,8 @@ function renderSubject(){
   var tasks = oneOff.filter(function(it){ return !it.due && !isDone(it, it.date); }).sort(byDateAsc);
   var done = oneOff.filter(function(it){ return isDone(it, it.date); }).sort(function(a, b){ return a.date < b.date ? 1 : -1; });
   function oneMeta(it){ return dayName(it.date) + (it.time ? ", " + fmtTime(it.time) : "") + (it.due ? ", deadline" : ""); }
-  var h = '<div class="btnrow"><button class="chunky small" type="button" data-add-task="' + esc(s.id) + '">Add a task</button><button class="chunky small plain" type="button" data-edit-subject="' + esc(s.id) + '">Edit subject</button></div>';
+  var h = '<div class="btnrow"><button class="backlink" type="button" data-back-uni>' + BACK_CHEVRON + 'All subjects</button></div>' +
+    '<div class="btnrow"><button class="chunky small" type="button" data-add-task="' + esc(s.id) + '">Add a task</button><button class="chunky small plain" type="button" data-edit-subject="' + esc(s.id) + '">Edit subject</button></div>';
   if(!mine.length) return h + '<div class="empty"><p>Nothing for ' + esc(s.code) + ' yet. Add assignments, exams, readings or weekly lectures.</p></div>';
   if(dls.length) h += '<h2 class="subhead">Deadlines</h2><ul class="list">' + dls.map(function(it, i){ return stickerHTML(it, it.date, i, false, oneMeta(it)); }).join("") + '</ul>';
   if(weekly.length){
@@ -651,10 +805,10 @@ function openSubjectForm(s){
   var used = subjects.map(function(x){ return x.color; });
   var colour = s ? s.color : (Object.keys(SUBJ_COLOURS).filter(function(k){ return used.indexOf(k) < 0; })[0] || "lilac");
   document.querySelectorAll('input[name="scol"]').forEach(function(r){ r.checked = r.value === colour; });
-  $("subj-overlay").hidden = false;
+  $("subj-overlay").hidden = false; setBackground(true);
   setTimeout(function(){ $("s-code").focus(); }, 30);
 }
-function closeSubjectForm(){ $("subj-overlay").hidden = true; editingSubject = null; if(lastFocus && lastFocus.focus && document.body.contains(lastFocus)) lastFocus.focus(); }
+function closeSubjectForm(){ $("subj-overlay").hidden = true; setBackground(false); editingSubject = null; if(lastFocus && lastFocus.focus && document.body.contains(lastFocus)) lastFocus.focus(); }
 function saveSubject(s){
   var full = {id: s.id, code: s.code, name: s.name || "", color: s.color, created: s.created || new Date().toISOString()};
   var i = subjects.findIndex(function(x){ return x.id === s.id; });
@@ -699,12 +853,20 @@ function syncSubjectField(){
   $("f-subject-wrap").hidden = !(c && c.value === "uni" && subjects.length);
 }
 
+function setBackground(blocked){ [document.querySelector(".app"), document.querySelector(".tabs")].forEach(function(el){ if(el) el.inert = !!blocked; }); }
 function toast(msg){
   var el = $("toast"); el.textContent = msg; el.hidden = false;
   clearTimeout(toast._t); toast._t = setTimeout(function(){ el.hidden = true; }, 2600);
 }
 function persist(){
-  try{ localStorage.setItem(STORE_KEY, JSON.stringify({format: 1, items: items, subjects: subjects, lastExport: lastExport})); return true; }
+  var keep = addDays(todayStr(), -7), ids = {};
+  items.forEach(function(it){ ids[it.id] = 1; });
+  Object.keys(plans).forEach(function(d){
+    if(d < keep){ delete plans[d]; return; }
+    Object.keys(plans[d]).forEach(function(id){ if(!ids[id]) delete plans[d][id]; });
+    if(!Object.keys(plans[d]).length) delete plans[d];
+  });
+  try{ localStorage.setItem(STORE_KEY, JSON.stringify({format: 1, items: items, subjects: subjects, lastExport: lastExport, plans: plans})); return true; }
   catch(e){ toast("Couldn't save on this device. Storage may be full or switched off."); return false; }
 }
 function cleanItem(it){
@@ -731,6 +893,9 @@ function toggleDone(id, d){
   if(it.repeat && it.repeat.freq) dates = dates.filter(function(x){ return x >= cutoff; });
   it.doneDates = dates;
   persist(); render();
+  var sel = '.tick[data-tick="' + (window.CSS && CSS.escape ? CSS.escape(id) : id) + '"][data-day="' + d + '"]';
+  var again = document.querySelector(sel);
+  if(again) again.focus();
 }
 
 /* ---------- Add / edit sheet ---------- */
@@ -756,7 +921,7 @@ function openForm(it, presetDay, preset){
   $("form-title").textContent = it ? "Edit sticker" : "New sticker";
   $("save-btn").textContent = it ? "Save changes" : "Add sticker";
   $("delete-btn").hidden = !it; $("confirm-box").hidden = true;
-  $("f-title-err").hidden = true;
+  $("f-title-err").hidden = true; $("f-end-err").hidden = true; $("f-until-err").hidden = true;
   $("f-title").value = it ? it.title : "";
   var cat = it ? it.cat : (preset && preset.cat) || "home";
   document.querySelectorAll('input[name="cat"]').forEach(function(r){ r.checked = r.value === cat; });
@@ -770,10 +935,10 @@ function openForm(it, presetDay, preset){
   setDays(it && it.repeat && it.repeat.days ? it.repeat.days : [parse($("f-date").value).getDay()]);
   $("f-due").checked = !!(it && it.due);
   syncRepeatDays();
-  $("overlay").hidden = false;
+  $("overlay").hidden = false; setBackground(true);
   setTimeout(function(){ $("f-title").focus(); }, 30);
 }
-function closeForm(){ $("overlay").hidden = true; editing = null; if(lastFocus && lastFocus.focus && document.body.contains(lastFocus)) lastFocus.focus(); }
+function closeForm(){ $("overlay").hidden = true; setBackground(false); editing = null; if(lastFocus && lastFocus.focus && document.body.contains(lastFocus)) lastFocus.focus(); }
 function newId(){ try{ if(crypto && crypto.randomUUID) return crypto.randomUUID().replace(/-/g, "").slice(0, 20); }catch(e){} return Date.now().toString(36) + Math.random().toString(36).slice(2, 10); }
 
 $("form").addEventListener("submit", function(e){
@@ -783,6 +948,8 @@ $("form").addEventListener("submit", function(e){
   var catEl = document.querySelector('input[name="cat"]:checked');
   var date = $("f-date").value || todayStr();
   var freq = $("f-repeat").value;
+  if($("f-time").value && $("f-end").value && $("f-end").value <= $("f-time").value){ $("f-end-err").hidden = false; $("f-end").focus(); return; }
+  if(freq && $("f-until").value && $("f-until").value < date){ $("f-until-err").hidden = false; $("f-until").focus(); return; }
   var repeat = null;
   if(freq){
     repeat = {freq: freq};
@@ -800,13 +967,14 @@ $("form").addEventListener("submit", function(e){
     doneDates: editing ? (editing.doneDates || []) : [], created: editing ? editing.created : new Date().toISOString()
   };
   var wasNew = !editing;
+  if(view === "today" && wasNew && !occursOn(it, day)){ day = date; }
   saveItem(it);
   closeForm();
-  if(view === "today" && !occursOn(it, day) && wasNew){ day = date; }
-  render();
   toast(wasNew ? "Sticker added" : "Changes saved");
 });
 $("f-title").addEventListener("input", function(){ $("f-title-err").hidden = true; });
+["f-time", "f-end"].forEach(function(id){ $(id).addEventListener("input", function(){ $("f-end-err").hidden = true; }); });
+["f-date", "f-until"].forEach(function(id){ $(id).addEventListener("input", function(){ $("f-until-err").hidden = true; }); });
 $("f-repeat").addEventListener("change", syncRepeatDays);
 $("f-cats").addEventListener("change", syncSubjectField);
 $("f-date").addEventListener("change", function(){ if(!document.querySelector('input[name="rday"]:checked') && $("f-date").value) setDays([parse($("f-date").value).getDay()]); });
@@ -836,6 +1004,9 @@ $("sheet").addEventListener("click", function(e){
   if(t.hasAttribute("data-edit-subject")){ var s = findSubject(t.getAttribute("data-edit-subject")); if(s) openSubjectForm(s); return; }
   if(t.hasAttribute("data-add-task")){ openForm(null, todayStr(), {cat: "uni", subject: t.getAttribute("data-add-task")}); return; }
   if(t.hasAttribute("data-back-uni")){ setView("uni"); return; }
+  if(t.hasAttribute("data-go-today")){ day = todayStr(); render(); return; }
+  if(t.hasAttribute("data-plan-day")){ planDay(day); return; }
+  if(t.hasAttribute("data-clear-plan")){ clearPlan(day); return; }
   if(t.hasAttribute("data-export")){ exportBackup(); return; }
   if(t.hasAttribute("data-import")){ $("import-file").click(); return; }
   if(t.hasAttribute("data-import-confirm")){ applyImport(); return; }
@@ -845,8 +1016,6 @@ $("daynav").addEventListener("click", function(e){
   var t = e.target.closest("button"); if(!t) return;
   if(t.id === "prev-day") day = addDays(day, -1);
   if(t.id === "next-day") day = addDays(day, 1);
-  if(t.id === "go-today") day = todayStr();
-  if(t.id === "back-uni"){ setView("uni"); return; }
   render();
 });
 $("add-btn").addEventListener("click", function(){
@@ -861,11 +1030,16 @@ function viewFromHash(){ return location.hash === "#week" ? "week" : location.ha
 function setView(v){ view = v; try{ location.hash = v === "subject" ? "uni" : v; }catch(e){} render(); window.scrollTo(0, 0); }
 window.addEventListener("hashchange", function(){ var v = viewFromHash(); if(v === "uni" && view === "subject") return; if(v !== view){ view = v; render(); } });
 
+/* Keep "today" and the sun/moon current. iPhone pauses timers while the app is
+   in the background, so also refresh the moment it comes back into view. */
 var lastDay = todayStr();
-setInterval(function(){
+function refreshClock(){
   var t = todayStr();
   if(t !== lastDay){ if(day === lastDay) day = t; lastDay = t; render(); } else renderScene();
-}, 60000);
+}
+setInterval(refreshClock, 60000);
+document.addEventListener("visibilitychange", function(){ if(document.visibilityState === "visible") refreshClock(); });
+window.addEventListener("pageshow", refreshClock);
 
 /* ---------- Storage (this device only) ---------- */
 function loadStore(){
@@ -875,9 +1049,10 @@ function loadStore(){
   if(!raw) return;
   try{
     var d = JSON.parse(raw);
-    items = Array.isArray(d.items) ? d.items : [];
-    subjects = (Array.isArray(d.subjects) ? d.subjects : []).sort(byCode);
+    items = (Array.isArray(d.items) ? d.items : []).map(cleanImportedItem).filter(Boolean);
+    subjects = (Array.isArray(d.subjects) ? d.subjects : []).map(cleanImportedSubject).filter(Boolean).sort(byCode);
     lastExport = typeof d.lastExport === "string" ? d.lastExport : null;
+    plans = cleanPlans(d.plans);
   }catch(e){ noteText = "Your saved stickers couldn't be read. Use Import backup to restore them."; }
 }
 $("import-file").addEventListener("change", function(){
